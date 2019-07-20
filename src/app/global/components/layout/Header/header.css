@@ -1,0 +1,159 @@
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    grid-gap: 5px;
+    background: linear-gradient(90deg, #f8f9ff 0, #3c9acc 40%, #0077b5 60%);
+    justify-content: center;
+    height: 58px;
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3)!important;
+    /* vertical */
+    align-items:center;
+    /* horizontal  */
+    justify-items: center;
+}
+
+.searcher{
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background: #f8f9ff;
+  align-items:center;
+  justify-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 10rem !important;
+  height: 39px;
+}
+
+.searcher:hover{
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5)!important;
+}
+
+.searcher form,input{
+  max-width: 100%;
+  min-width: 100%;
+  position: relative;
+}
+
+.searcher button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.header input:focus,
+.header select:focus,
+.header textarea:focus,
+.header button:focus,
+.header button:hover,
+.header button,input,
+.header input:active {
+    outline: none ;
+    border-color: transparent ;
+    box-shadow: none ;
+    background-color: transparent   ;
+    border: none ;
+}
+
+
+
+input{
+  padding-right: 38px;
+  width: 380px ;
+}
+
+
+
+.searcher img{
+  opacity: 0.2;
+  width: 24px;
+  height: 24px;
+
+}
+
+.campana {
+  justify-self: end;
+  padding-right: 10px;
+}
+
+
+/*
+
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: auto;
+    background: linear-gradient(90deg, #f8f9ff 0, #3c9acc 40%, #0077b5 60%);
+    margin-bottom: 0.1rem!important;
+    height: 58px;
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3)!important;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .header-content{
+    display: grid;
+    justify-content: center !important;
+    align-content: space-around;
+    align-items:center;
+    justify-items: center;
+    padding: 5px
+
+  }
+
+
+  input{
+    border:none !important;
+    background-color: transparent !important;
+    width: 380px !important;
+    min-width: 50px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus,
+  button:hover,
+  button,
+  input:active {
+      outline: none !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+      height: 38px;
+  }
+
+
+  .searcher{
+    width: 450px !important;
+    height: 39px;
+    min-width: 50px;
+    border-radius: 10rem !important;
+    background: #f8f9ff;
+  }
+
+  .searcher:hover{
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5)!important;
+  }
+
+
+  .btn-searcher{
+    border-top-right-radius: 10rem !important;
+    border-bottom-right-radius: 10rem !important;
+  } */

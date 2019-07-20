@@ -1,0 +1,88 @@
+.navigation {
+  grid-area: navigation;
+  background: #f8f9ff;
+  display: block;
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3);
+  margin-right: 2px;
+
+}
+
+.is-selected {
+  color: red;
+  background: rgb(115, 223, 199);
+  border-radius: 100px 0px 0px 100px;
+  width: 100%;
+}
+
+.navigation li {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+}
+
+.navigation nav ul {
+  display: grid;
+  padding: 0px;
+  margin: 10px;
+  flex: 1;
+}
+
+.navigation a{
+  text-decoration-line: none;
+  color: #252556;
+}
+
+/* item navigation */
+.content-item {
+  display: grid;
+  grid-template: auto / 50px 152px;
+  grid-template-areas: "icon title";
+  padding: 10px 0px 10px 10px  ;
+  border-radius: 100px 0px 0px 100px;
+}
+
+
+.content-item:hover {
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.icon {
+  grid-area: icon;
+  justify-self: center;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  grid-area: title;
+  width: 100%;
+  display: grid;
+  grid-template: auto / 100%;
+  justify-self: start;
+  align-content: center;
+}
+
+.navigation-back{
+  font-size: 24px;
+  color: red;
+  display: grid;
+ }
+
+.navigation button:hover,
+.navigation button:focus,
+.navigation button:active{
+  background: rgba(0, 0, 0, 0.09) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.navigation button {
+  border-color: rgba(0, 0, 0, 0.09) ;
+}
+
+.container-btn-back {
+  display: grid;
+  justify-items: end;
+  margin: 5px;
+}

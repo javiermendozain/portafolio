@@ -1,0 +1,12 @@
+.content {
+  grid-area: content;
+  background: #f8f9ff;
+  overflow: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-between;
+
+}
+
+

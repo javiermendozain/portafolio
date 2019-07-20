@@ -1,0 +1,79 @@
+
+.login-container{
+  display: grid;
+  grid-template-columns: minmax(300px,500px) minmax(250px,1fr);
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 10px; */
+  justify-items: center;
+  align-items: center;
+  color: #FFF;
+  background: #125C;
+
+}
+
+.login-buttons {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+.login-container img{
+  max-width: 100%;
+}
+
+.content-login-button {
+  display: grid;
+  grid-template: auto / 50px 1fr;
+  grid-template-areas: "icon text";
+  padding: 10px 10px 10px 10px  ;
+  border-radius: 10rem;
+  width: 80%;
+}
+
+.content-login-button:hover {
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5)!important;
+}
+
+.icon {
+  grid-area: icon;
+  justify-self: center;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  grid-area: text;
+  width: 100%;
+  display: grid;
+  grid-template: auto / 100%;
+  justify-items: start;
+  align-content: center;
+  padding-left: 10px;
+}
+
+.btn-google {
+  background: red;
+}
+
+.btn-facebook{
+  background:rgb(1, 1, 119);
+}
+
+.btn-git-hub{
+  background: black;
+
+}
+.btn-twitter {
+  background: #0077b5;
+}
+
+.btn-linkedin {
+  background: #0077b5;
+}
+
+

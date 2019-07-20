@@ -1,0 +1,10 @@
+
+
+.footer {
+  grid-area: content;
+  text-align: center;
+  background: #AFF;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 200px;
+}
