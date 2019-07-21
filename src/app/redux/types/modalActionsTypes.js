@@ -1,10 +1,8 @@
 import {MODAL_ACTIONS} from '../actions/modalActions';
 
 export const OpenCloseModal = () => (dispatch, getState) => {
-  const { isOpenModal } = getState().modalReducer;
   dispatch({
-    type: MODAL_ACTIONS.OpenCloseModal(),
-    payload: !isOpenModal
+    type: MODAL_ACTIONS.OpenCloseModal()
   });
 };
 

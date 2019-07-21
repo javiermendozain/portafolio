@@ -13,7 +13,7 @@ export default ( state = INITIAL_STATE, action ) => {
     case MODAL_ACTIONS.OpenCloseModal():
       return {
         ...state,
-        isOpenModal: action.payload
+        isOpenModal: !state.isOpenModal
       };
 
     case MODAL_ACTIONS.setContentModal():

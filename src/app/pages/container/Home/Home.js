@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import { connect } from 'react-redux';
 import HomeLayout from '../../components/Home/home-layout';
-import Moda from '../../../global/components/layout/Modal/Modal';
 import { setContentModal } from '../../../redux/types/modalActionsTypes';
 
 class Home extends Component {
@@ -20,7 +19,6 @@ class Home extends Component {
     return (
       <Fragment>
         <HomeLayout/>
-        <Moda/>
       </Fragment>
     );
   }

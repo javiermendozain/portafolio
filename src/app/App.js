@@ -7,6 +7,7 @@ import Login from './pages/container/Login/Login';
 // Routes
 import routes from './entry/routes';
 import routerHome from './entry/routerHome';
+import Modal from './global/components/layout/Modal/Modal';
 
 export default ({ server, location, context }) => {
   const routesMap = routes.map((route, i) => <Route key={i} {...route} />);
@@ -20,6 +21,7 @@ export default ({ server, location, context }) => {
           <Route path='/' component={routerHome} exact = {false} />
         </Switch>
       </BrowserRouter>
+      <Modal/>
     </div>
   );
 
