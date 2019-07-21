@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { connect } from 'react-redux';
 import HomeLayout from '../../components/Home/home-layout';
-import { setContentModal } from '../../../redux/types/modalActionsTypes';
+import { setContentModal } from '../../../redux/actions/modalActions';
 
 class Home extends Component {
 

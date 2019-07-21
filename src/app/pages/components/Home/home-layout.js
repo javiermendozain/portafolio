@@ -2,7 +2,7 @@
 import React,{ Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { OpenCloseModal } from '../../../redux/types/modalActionsTypes';
+import { openCloseModal } from '../../../redux/actions/modalActions';
 import { Button } from 'reactstrap';
 
 
@@ -10,7 +10,7 @@ import { Button } from 'reactstrap';
 //import styles from './Home.scss';
 
 const Home = (props) => {
-  const { OpenCloseModal } = props;
+  const { openCloseModal } = props;
 
 
   const logOut = () => {
@@ -146,7 +146,7 @@ const Home = (props) => {
         say Hello
       </Link>
       <br/>
-      <Button onClick={() => OpenCloseModal()} >
+      <Button onClick={() => openCloseModal()} >
         Open Modal
       </Button>
 
@@ -155,7 +155,7 @@ const Home = (props) => {
 };
 
 const mapDispatchToProps = {
-  OpenCloseModal
+  openCloseModal
 };
 
 

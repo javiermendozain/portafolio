@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-import { OpenCloseModal } from '../../../../redux/types/modalActionsTypes';
+import { openCloseModal } from '../../../../redux/actions/modalActions';
 
 const ModalDefault = (props) => {
-  const { modalReducer: { header, body, footer, isOpenModal }, OpenCloseModal } = props;
+  const { modalReducer: { header, body, footer, isOpenModal }, openCloseModal } = props;
 
   return (
     <Modal
       isOpen={isOpenModal}
-      toggle={()=>OpenCloseModal()}
+      toggle={()=>openCloseModal()}
       fade
     >
       <ModalHeader
-        toggle={()=>OpenCloseModal()}
+        toggle={()=>openCloseModal()}
       >
         {header}
       </ModalHeader>
@@ -33,7 +33,7 @@ const mapStateToProps = ({modalReducer}) => {
 };
 
 const mapDispatchToProps = {
-  OpenCloseModal
+  openCloseModal
 };
 
 export default connect(mapStateToProps, mapDispatchToProps )(ModalDefault);

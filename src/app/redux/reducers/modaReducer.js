@@ -1,5 +1,5 @@
 
-import { MODAL_ACTIONS } from '../actions/modalActions';
+import { MODAL_ACTIONS } from '../types/modalActionsTypes';
 const INITIAL_STATE = {
   isOpenModal: false,
   header: 'Header',
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 
 export default ( state = INITIAL_STATE, action ) => {
   switch (action.type) {
-    case MODAL_ACTIONS.OpenCloseModal():
+    case MODAL_ACTIONS.openCloseModal():
       return {
         ...state,
         isOpenModal: !state.isOpenModal
