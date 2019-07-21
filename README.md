@@ -2,12 +2,9 @@
 
 # React Pro
 
+## Documentacion firebase with redux on reactjs
+http://react-redux-firebase.com/
 
-# ACtividades pendientes
-  - # Configuraciones
-  - Mejorar la implementacion de Redux
-  - configurar build:dev   & build:pro
+https://github.com/prescottprue/react-redux-firebase
 
-  - # App
-  - Multiples lenguajes
-  - Layout para modal
+# Actividades pendientes
