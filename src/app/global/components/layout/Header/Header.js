@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { logOut } from '../../../../redux/actions/loginActions';
 
 //  Assets
 //import logo from './logo.svg';
 import './header.css';
 
-const Header = () => {
+const Header = ({logOut}) => {
   return (
     <header className="header fixed-top  " >
       {/* Logo */}
@@ -26,7 +28,7 @@ const Header = () => {
       </div>
 
       <div className='campana'>
-        Campana
+        <img onClick={()=>logOut()} src='/logout.png' />
         {/* <!-- Nav Item - Alerts --> */}
         {/* <li className="nav-item dropdown no-arrow mx-1">
           <a className="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,5 +82,9 @@ const Header = () => {
   );
 };
 
+const mapDistpachToProps = {
+  logOut
+};
 
-export default Header;
+export default connect( null, mapDistpachToProps )(Header);
+

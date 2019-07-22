@@ -2,9 +2,9 @@
 import { MODAL_ACTIONS } from '../types/modalActionsTypes';
 const INITIAL_STATE = {
   isOpenModal: false,
-  header: 'Header',
-  body: 'Body',
-  footer: 'Fotter'
+  header: '',
+  body: '',
+  footer: ''
 };
 
 

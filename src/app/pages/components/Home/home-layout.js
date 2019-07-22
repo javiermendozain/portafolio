@@ -4,22 +4,19 @@ import { Link, withRouter } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { openCloseModal } from '../../../redux/actions/modalActions';
-import { logOut } from '../../../redux/actions/loginActions';
 
 
 // Styles
 //import styles from './Home.scss';
 
 const Home = (props) => {
-  const { openCloseModal, logOut } = props;
+  const { openCloseModal } = props;
 
   return (
     <Fragment>
 
       <br />
-      <div onClick={logOut} >
-        LogOut
-      </div>
+
 
       Pagina de inicio
       <br />
@@ -151,7 +148,7 @@ const Home = (props) => {
 };
 
 const mapDispatchToProps = {
-  openCloseModal, logOut
+  openCloseModal
 };
 
 

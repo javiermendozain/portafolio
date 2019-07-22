@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 const CheckLog = ({children, history, firebase}) => {
   const showContent = () => {
-    const { auth: {uid} } = firebase;
-    if (!uid) {
+    const { auth: {uid, isLoaded} } = firebase;
+    if (!uid && isLoaded) {
       history.replace('/login');
       return null;
     }

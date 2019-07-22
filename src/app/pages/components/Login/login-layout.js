@@ -10,7 +10,14 @@ import './login.css';
 
 const loginLayout = (props)=>{
 
-  const { logIn, setContentModal, openCloseModal } = props;
+  const { logIn, setContentModal, openCloseModal, firebase } = props;
+  const { auth: {uid, isLoaded} } = firebase;
+
+  // user logged
+  if (uid && isLoaded) {
+    props.history.replace('/');
+  }
+
   const successfully = () => {
     const modal = {
       header: '',

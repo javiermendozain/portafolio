@@ -15,6 +15,18 @@
     justify-items: center;
 }
 
+.header img:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header img{
+  opacity: 0.4;
+  width: 24px;
+  height: 24px;
+
+}
+
 .searcher{
   display: grid;
   grid-column-start: 2;

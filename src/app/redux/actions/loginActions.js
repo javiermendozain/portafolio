@@ -1,3 +1,4 @@
+import {root as reference} from '../../global/constants/referenciesFirestore';
 
 export const logIn = (successfully, wrongly) => async (dispatch, getState, {getFirebase, getFirestore}) => {
   const firebase = getFirebase();
@@ -14,12 +15,14 @@ export const logIn = (successfully, wrongly) => async (dispatch, getState, {getF
         providerData
       } = res.user;
 
+      console.log(reference);
+
       //  First Login
       if (creationTime === lastSignInTime) {
         const { providerId } = providerData[0];
         const creationAt = new Date(lastSignInTime).getTime();
         //  Create account on Firestore
-        await firestore.collection('users').doc(uid).collection('profile').doc(uid).set({
+        await firestore.collection(reference.root.users.ref()).doc(uid).collection(reference.root.users.profile.ref()).doc(uid).set({
           uid,
           displayName,
           email,
@@ -33,7 +36,7 @@ export const logIn = (successfully, wrongly) => async (dispatch, getState, {getF
       }
 
       //  Checkin history logIn
-      await firestore.collection('users').doc(uid).collection('historyLog').doc().set({
+      await firestore.collection(reference.root.users.ref()).doc(uid).collection(reference.root.users.historyLog.ref()).doc().set({
         uid,
         logInAtDate: new Date().getTime()
       });
