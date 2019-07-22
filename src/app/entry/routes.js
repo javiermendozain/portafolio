@@ -5,7 +5,8 @@ import NotFound from '../pages/components/NotFount/NotFound';
 import HelloWord from '../pages/components/HelloWord/Hello_word';
 
 // Containers
-import Blog from '../pages/blog';
+import Blog from '../pages/container/Blog/Blog';
+import NewBlog from '../pages/container/Blog/newBlog';
 
 const routes = [
   {
@@ -19,8 +20,11 @@ const routes = [
   },
   {
     path:'/blog',
-    component: Blog,
-    exact: true
+    component: Blog
+  },
+  {
+    path:'/newBlog',
+    component: NewBlog
   },
   {
     path: null,

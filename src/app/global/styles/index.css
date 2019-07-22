@@ -40,3 +40,12 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	border-right: 2px solid #f8f9ff;
 }
+
+/* container of for-editor viewer posts  */
+.for-container{
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: none !important;
+  border:none !important;
+  height: 100% !important;
+}
+
