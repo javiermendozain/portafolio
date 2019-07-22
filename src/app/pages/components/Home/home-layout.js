@@ -1,28 +1,24 @@
 // Dependencies
 import React,{ Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { openCloseModal } from '../../../redux/actions/modalActions';
-import { Button } from 'reactstrap';
+import { logOut } from '../../../redux/actions/loginActions';
 
 
 // Styles
 //import styles from './Home.scss';
 
 const Home = (props) => {
-  const { openCloseModal } = props;
-
-
-  const logOut = () => {
-    window.location.href='/login';
-  };
+  const { openCloseModal, logOut } = props;
 
   return (
     <Fragment>
 
       <br />
       <div onClick={logOut} >
-        Login
+        LogOut
       </div>
 
       Pagina de inicio
@@ -155,7 +151,7 @@ const Home = (props) => {
 };
 
 const mapDispatchToProps = {
-  openCloseModal
+  openCloseModal, logOut
 };
 
 
