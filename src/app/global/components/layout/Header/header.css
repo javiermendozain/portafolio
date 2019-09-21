@@ -15,15 +15,29 @@
     justify-items: center;
 }
 
-.header img:hover{
-  opacity: 0.7;
+.header .Branch:hover{
+  opacity: 0.9;
   cursor: pointer;
 }
 
-.header img{
-  opacity: 0.4;
-  width: 24px;
-  height: 24px;
+.header .Branch img{
+  /* opacity: 0.4; */
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3)!important;
+}
+
+.header .Branch {
+  color: rgba(0,0,0,.75);
+  width: 100%;
+  align-items: center;
+  display: inline-flex;
+}
+
+.Profession{
+  font-style: italic;
 
 }
 

@@ -86,3 +86,10 @@
   justify-items: end;
   margin: 5px;
 }
+
+
+/* hidden Items */
+
+.hidden{
+  opacity: 0.4;
+}

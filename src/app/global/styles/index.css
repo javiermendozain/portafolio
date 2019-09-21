@@ -49,3 +49,15 @@ body::-webkit-scrollbar-thumb {
   height: 100% !important;
 }
 
+
+.containerItemCategory::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+	background: #f8f9ff;
+}
+
+.containerItemCategory::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0, .4);
+	border-radius: 10px;
+	border-right: 2px solid #f8f9ff;
+}

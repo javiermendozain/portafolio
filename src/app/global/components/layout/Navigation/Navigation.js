@@ -11,39 +11,42 @@ import './navigation.css';
 const Navigation = () => {
   return (
     <div className='navigation' >
-      <div className='container-btn-back'>
+      {/* Hidden Temporal
+
+        <div className='container-btn-back'>
         <Button onClick={()=>true} outline color="primary" >
           <FontAwesomeIcon icon={faChevronLeft} className='navigation-back' />
         </Button>
       </div>
       <hr className="sidebar-divider my-0"/>
+       */}
       {/* <!-- Nav Item - Pages Collapse Menu --> */}
       <nav>
         <ul>
           <li>
-            <NavLink to='/' exact activeClassName='is-selected' >
-              <div className='content-item'>
-                <img src='/online.png' className='icon' />
-                <span className='title'> Inicio </span>
-              </div>
-            </NavLink>
+            {/* <NavLink to='/' exact activeClassName='is-selected' > */}
+            <div className='content-item hidden'>
+              <img src='./icon/house.png' className='icon' />
+              <span className='title'> Inicio </span>
+            </div>
+            {/* </NavLink> */}
           </li>
         </ul>
         <ul>
           <li>
-            <NavLink to='/cursos' activeClassName='is-selected' >
-              <div className='content-item'>
-                <img src='/online.png' className='icon' />
-                <span className='title'>Cursos</span>
-              </div>
-            </NavLink>
+            {/* <NavLink to='/cursos' activeClassName='is-selected' > */}
+            <div className='content-item hidden'>
+              <img src='./icon/elearning.png' className='icon' />
+              <span className='title'>Cursos</span>
+            </div>
+            {/* </NavLink> */}
           </li>
         </ul>
         <ul>
           <li>
             <NavLink to='/blog' activeClassName='is-selected' >
               <div className='content-item'>
-                <img src='/online.png' className='icon' />
+                <img src='./icon/writer.png' className='icon' />
                 <span className='title'>Blog</span>
               </div>
             </NavLink>
@@ -51,22 +54,22 @@ const Navigation = () => {
         </ul>
         <ul>
           <li>
-            <NavLink to='/about' activeClassName='is-selected' >
-              <div className='content-item'>
-                <img src='/online.png' className='icon' />
-                <span className='title'>Acerca</span>
-              </div>
-            </NavLink>
+            {/* <NavLink to='/about' activeClassName='is-selected' > */}
+            <div className='content-item hidden'>
+              <img src='./icon/award.png' className='icon' />
+              <span className='title'>Acerca</span>
+            </div>
+            {/* </NavLink> */}
           </li>
         </ul>
         <ul>
           <li>
-            <NavLink to='/cv' activeClassName='is-selected' >
-              <div className='content-item'>
-                <img src='/online.png' className='icon' />
-                <span className='title'>Currículum V</span>
-              </div>
-            </NavLink>
+            {/* <NavLink to='/cv' activeClassName='is-selected' > */}
+            <div className='content-item hidden'>
+              <img src='./icon/resume.png' className='icon' />
+              <span className='title'>Currículum Vitae</span>
+            </div>
+            {/* </NavLink> */}
           </li>
         </ul>
       </nav>
