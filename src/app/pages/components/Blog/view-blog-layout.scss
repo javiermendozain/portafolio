@@ -1,0 +1,20 @@
+.title{
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0 10px;
+    color: #0077b5;
+    display: grid;
+}
+
+.title small{
+    color:rgba(0,0,0,.3);
+    font-size: 0.75rem;
+    margin: 0 40px;
+}
+
+img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+

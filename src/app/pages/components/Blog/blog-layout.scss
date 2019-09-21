@@ -1,0 +1,42 @@
+@media screen and (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, max(33.33%));
+    grid-gap: 5px;
+    margin: 15px 4px 4px 4px;
+}
+
+.post {
+    border-radius: 0.5rem;
+    padding: 4px;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .2);
+    display: grid;
+    grid-row-gap: 5px;
+    // font-size: small
+}
+
+.post:hover {
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .5);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.contentTagPost {
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,.3);
+    border-radius: 1rem;
+    height: min-content;
+    padding: 0px 5px;
+}
+
+.timePost {
+    display: inline-flex;
+    color:rgba(0,0,0,.3);
+    align-items: center;
+    margin: 0 2px;
+}
