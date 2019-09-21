@@ -53,7 +53,11 @@ export default type => {
 
   rules.push({
     test:/\.css$/,
-    use:['style-loader','css-loader']
+    use:[
+      'style-loader',
+      // 'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]'
+      'css-loader'
+    ]
   });
 
   return rules;

@@ -50,9 +50,10 @@ export default type => {
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.UglifyJsPlugin({ minimize: true }),
       new CompressionPlugin({
+        //Change "asset" to "filename".
         asset: '[path].gz[query]',
         algorithm: 'gzip',
-        test: /\.js$|\.css$|\.html$/,
+        test: /\.js$|\.css$|\.scss$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
         threshold: 10240,
         minRatio: 0.8
       })
