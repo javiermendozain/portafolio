@@ -1,0 +1,57 @@
+.categories{
+    height: 37.97px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerItemCategory {
+    display: inline-flex;
+    grid-gap: 5px;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.addCategory{
+    width: 45px;
+    border-radius: 50rem ;
+    margin-right: 5px;
+}
+
+.buttonDelete{
+    display: inline-block;
+    // background: #000;
+    width: 20px !important;
+    justify-items: center;
+    text-align: center;
+    margin: 0 2px 0 2px;
+}
+.itemCategory{
+    color: white;
+    border-radius: 50px ;
+    padding: 0px 15px;
+    margin: 2px 2px;
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.05);
+    // box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .3);
+
+    min-width: max-content;
+}
+
+.itemCategory:hover{
+    cursor: pointer;
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.4);
+
+}
+
+.containerItemCategory::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: #f8f9ff;
+}
+
+.containerItemCategory::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0, .0);
+    border-radius: 10px;
+    border-right: 2px solid #f8f9ff;
+}
