@@ -6,7 +6,8 @@ import HelloWord from '../pages/components/HelloWord/Hello_word';
 
 // Containers
 import Blog from '../pages/container/Blog/Blog';
-import NewBlog from '../pages/container/Blog/newBlog';
+import NewPost from '../pages/container/Blog/newPost';
+import viewBlogLayout from '../pages/components/Blog/view-blog-layout';
 
 const routes = [
   {
@@ -15,16 +16,22 @@ const routes = [
     exact: true
   },
   {
-    path: '/hello',
-    component: HelloWord
+    path:'/blog/newPost',
+    component: NewPost
+  },
+  {
+    path:'/blog/:idCategory',
+    component: Blog,
+    exact: true
+  },
+  {
+    path:'/blog/v/:idPost',
+    component: viewBlogLayout,
+    exact: true
   },
   {
     path:'/blog',
     component: Blog
-  },
-  {
-    path:'/newBlog',
-    component: NewBlog
   },
   {
     path: null,

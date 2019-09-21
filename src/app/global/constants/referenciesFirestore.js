@@ -8,6 +8,15 @@ export const root = ({
       historyLog:{
         ref: ()=>'HISTORY_LOG'
       }
+    },
+    posts: {
+      ref: () => 'POSTS'
+    },
+    category: {
+      ref: () => 'CATEGORIES'
+    },
+    tags: {
+      ref: () => 'TAGS'
     }
 
   }
