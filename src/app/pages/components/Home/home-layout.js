@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { openCloseModal } from '../../../redux/actions/modalActions';
+import LoadingLayout from '../../../global/components/Loading/loading-layout';
 
 
 // Styles
@@ -12,138 +13,16 @@ import { openCloseModal } from '../../../redux/actions/modalActions';
 const Home = (props) => {
   const { openCloseModal } = props;
 
+  setTimeout(() => {
+    props.history.push('/blog');
+  },2000);
+
   return (
-    <Fragment>
+    <div style={{textAlign: 'center'}}>
+      Bienvenidos!
+      <LoadingLayout/>
+    </div >
 
-      <br />
-
-
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      Pagina de inicio
-      <br />
-      <Link to="/blog" >
-        Go to Blog
-      </Link>
-
-      <br />
-      <Link to="/notFound" >
-        Go to Not Found
-      </Link>
-
-      <br />
-      <Link to="/hello" >
-        say Hello
-      </Link>
-      <br/>
-      <Button onClick={() => openCloseModal()} >
-        Open Modal
-      </Button>
-
-    </Fragment>
   );
 };
 

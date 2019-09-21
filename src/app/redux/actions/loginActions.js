@@ -15,31 +15,38 @@ export const logIn = (successfully, wrongly) => async (dispatch, getState, {getF
         providerData
       } = res.user;
 
-      console.log(reference);
 
       //  First Login
       if (creationTime === lastSignInTime) {
         const { providerId } = providerData[0];
         const creationAt = new Date(lastSignInTime).getTime();
         //  Create account on Firestore
-        await firestore.collection(reference.root.users.ref()).doc(uid).collection(reference.root.users.profile.ref()).doc(uid).set({
-          uid,
-          displayName,
-          email,
-          emailVerified,
-          phoneNumber,
-          photoURL,
-          providerId,
-          creationTime: creationAt
-        });
+        await firestore.collection(reference.root.users.ref())
+          .doc(uid)
+          .collection(reference.root.users.profile.ref())
+          .doc(uid)
+          .set({
+            uid,
+            displayName,
+            email,
+            emailVerified,
+            phoneNumber,
+            photoURL,
+            providerId,
+            creationTime: creationAt
+          });
 
       }
 
       //  Checkin history logIn
-      await firestore.collection(reference.root.users.ref()).doc(uid).collection(reference.root.users.historyLog.ref()).doc().set({
-        uid,
-        logInAtDate: new Date().getTime()
-      });
+      await firestore.collection(reference.root.users.ref())
+        .doc(uid).collection(reference.root.users.historyLog.ref())
+        .doc()
+        .set({
+          uid,
+          logInAtDate: new Date().getTime()
+          // TODO: Add devices on logged
+        });
 
       successfully();
 
