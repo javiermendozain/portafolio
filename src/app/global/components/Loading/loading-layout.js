@@ -19,8 +19,8 @@ const LoadingLayout = () => {
     <div style={{justifyItems:'center'}} >
       <Lottie
         options={defaultOptions}
-        height={420}
-        width={591}
+        height={480}
+        width={600}
         isStopped={false}
         isPaused={false}
       />

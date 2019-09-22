@@ -2,14 +2,14 @@
   grid-area: navigation;
   background: #f8f9ff;
   display: block;
-  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3);
+  /* box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3); */
   margin-right: 2px;
 
 }
 
 .is-selected {
-  color: red;
-  background: rgb(115, 223, 199);
+  /* color: red; */
+  background: #fa7800;
   border-radius: 100px 0px 0px 100px;
   width: 100%;
 }
@@ -29,7 +29,7 @@
 
 .navigation a{
   text-decoration-line: none;
-  color: #252556;
+  color: #1a2849;
 }
 
 /* item navigation */

@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 5px;
     grid-gap: 5px;
-    background: linear-gradient(90deg, #f8f9ff 0, #3c9acc 40%, #0077b5 60%);
+    background: linear-gradient(90deg, #fff -10%, #29b8e8 40%, #0077B7 80%);
     justify-content: center;
     height: 58px;
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3)!important;
@@ -36,8 +36,14 @@
   display: inline-flex;
 }
 
+.header .Branch strong{
+  /* color: cornflowerblue; */
+}
+
+
 .Profession{
-  font-style: italic;
+  /* font-style: italic; */
+  font-size: 0.7rem;
 
 }
 

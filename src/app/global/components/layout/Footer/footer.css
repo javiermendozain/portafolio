@@ -3,8 +3,15 @@
 .footer {
   grid-area: content;
   text-align: center;
-  background: #AFF;
+  /* background: #1a2849; */
+  background: #f8f9ff;
+  /* border-top: solid   0.2px rgba(0, 0, 0, 0.2  ); */
+
+  /* background: linear-gradient(90deg, #fff -10%, #29b8e8 40%, #0077B7 80%); */
+
   grid-column-start: 1;
   grid-column-end: 2;
   height: 200px;
+  color: #1a2849;
 }
+/* #1a2849 - # 233567 */

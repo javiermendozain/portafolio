@@ -57,7 +57,7 @@ const loginLayout = (props)=>{
 
         {/* Button Log */}
         <div className='content-login-button btn-google' onClick={() => logIn(successfully,wrongly)}>
-          <img src='/online.png' className='icon' />
+          <img src='./icon/online.png' className='icon' />
           <span className='text'> Login with google</span>
         </div>
         {/*
@@ -84,7 +84,7 @@ const loginLayout = (props)=>{
 
       {/* Imagen */}
       <div>
-        <img src='/img-log.png'/>
+        <img src='./icon/img-log.png'/>
       </div>
     </div>
   );

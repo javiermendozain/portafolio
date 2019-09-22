@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import { Button, Label, Input,
   ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import Select from 'react-select';
 import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faSave, faPlus} from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faSave, faPlus, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { setContentModal, openCloseModal } from '../../../../redux/actions/modalActions';
 import { saveCategory, getAllCategories,
   typingCategory, editingColorCategory, editingCategory,
@@ -27,8 +27,8 @@ class Categories extends React.Component {
     this.state = {
       dropdownOpen: false,
       isOpenModalAddCategory: false,
-      isOpenModalAddTag: false
-
+      isOpenModalAddTag: false,
+      selectedCategory: 0
     };
     this.toggle = this.toggle.bind(this);
     this.openCloseModalAddCategory = this.openCloseModalAddCategory.bind(this);
@@ -89,15 +89,26 @@ class Categories extends React.Component {
 
     const _showCategories = ()=>{
       const { categoryReducer: { categories= []}, deleteCategory, history } = this.props;
-      return categories.map( function (item, index) {
-        return (
+      const res =[];
+      res.push(<div
+        key='-1'
+        className= {style.itemCategory}
+        style= {{background:'#fa7800'}}
+        onClick={()=> this.setState({selectedCategory: 0},()=>history.push('/blog/') )}>
+        Todo
+        { (this.state.selectedCategory === 0) && <Fragment> <FontAwesomeIcon icon={faCheckCircle} /></Fragment>}
+      </div >);
+
+      categories.map((item, index)=> {
+        res.push(
           <div
             key={index}
             className={style.itemCategory}
             style={{background:`${(item.color)? item.color : 'red'}`}}
-            onClick={()=> history.push(`/blog/${item.id}`)}
+            onClick={()=> this.setState({selectedCategory: item.id},()=>history.push(`/blog/${item.id}`) )}
           >
             {item.category}
+            { (item.id === this.state.selectedCategory) && <Fragment> <FontAwesomeIcon icon={faCheckCircle} /></Fragment>}
             { (!isEmpty(uid)) &&
               <div className={style.buttonDelete} onClick={()=>{
                 // eslint-disable-next-line no-alert
@@ -110,7 +121,9 @@ class Categories extends React.Component {
               </div>
             }
           </div >);
+        return null;
       });
+      return res;
     };
 
 
