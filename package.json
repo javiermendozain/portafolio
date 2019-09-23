@@ -14,7 +14,7 @@
     "build:dev": "npm run clean & NODE_ENV=development BABEL_ENV=development babel-node src/server",
     "build:analyzer": "npm run clean && NODE_ENV=development BABEL_ENV=development ANALYZER=true babel-node src/server",
     "build:prod": "npm run build && NODE_ENV=production BABEL_ENV=production babel-node src/server",
-    "deploy": "firebase deploy",
+    "deploy": "firebase deploy && cd public && git add . && git commit -m 'relase' || git push origin master",
     "test": "echo \"Error: no test specified\"",
     "watch-client": "webpack --watch --config webpack/webpack.config.client.js",
     "watch-server": "webpack --watch --config webpack/webpack.config.server.js"

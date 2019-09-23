@@ -1,17 +1,49 @@
-
-
 .footer {
   grid-area: content;
   text-align: center;
+  display: grid;
+  row-gap: 20px;
   /* background: #1a2849; */
-  background: #f8f9ff;
-  /* border-top: solid   0.2px rgba(0, 0, 0, 0.2  ); */
-
+  /* background: #f8f9ff; */
+  border-top: solid 0.2px rgba(0, 0, 0, 0.2);
   /* background: linear-gradient(90deg, #fff -10%, #29b8e8 40%, #0077B7 80%); */
-
   grid-column-start: 1;
   grid-column-end: 2;
-  height: 200px;
+  height: 100%;
   color: #1a2849;
 }
 /* #1a2849 - # 233567 */
+
+.footer .col {
+  /* opacity: 0.7; */
+}
+
+.footer strong {
+  opacity: 1 !important;
+}
+
+.subcribe {
+  opacity: 0.9;
+
+}
+
+small {
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  color: #1a2849;
+  opacity: 0.7;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #1050a5;
+  opacity: 1;
+}
+
+a:active {
+  text-decoration: none;
+  color: #1050a5;
+}

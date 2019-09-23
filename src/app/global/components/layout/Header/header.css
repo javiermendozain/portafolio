@@ -2,7 +2,7 @@
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     padding: 5px;
     grid-gap: 5px;
     background: linear-gradient(90deg, #fff -10%, #29b8e8 40%, #0077B7 80%);
@@ -30,10 +30,13 @@
 }
 
 .header .Branch {
-  color: rgba(0,0,0,.75);
+  color: #1a2849;
   width: 100%;
   align-items: center;
   display: inline-flex;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding: 0 0 0 30px;
 }
 
 .header .Branch strong{
@@ -49,8 +52,8 @@
 
 .searcher{
   display: grid;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 9;
   background: #f8f9ff;
   align-items:center;
   justify-items: center;
