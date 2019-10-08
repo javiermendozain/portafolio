@@ -1,5 +1,5 @@
 {
-  "name": "react-pro",
+  "name": "portafolio",
   "version": "1.0.0",
   "scripts": {
     "build": "npm run clean && npm run build-client && npm run build-server",

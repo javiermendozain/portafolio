@@ -93,7 +93,7 @@ class Categories extends React.Component {
       res.push(<div
         key='-1'
         className= {style.itemCategory}
-        style= {{background:'#fa7800'}}
+        style= {{background:'#1a2849'}}
         onClick={()=> this.setState({selectedCategory: 0},()=>history.push('/blog/') )}>
         Todo
         { (this.state.selectedCategory === 0) && <Fragment> <FontAwesomeIcon icon={faCheckCircle} /></Fragment>}
