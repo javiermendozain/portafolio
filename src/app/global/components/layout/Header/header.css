@@ -2,11 +2,11 @@
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(12, 1fr); */
     padding: 5px;
     grid-gap: 5px;
     background: linear-gradient(90deg, #fff -10%, #29b8e8 40%, #0077B7 80%);
-    justify-content: center;
+    justify-content: start;
     height: 58px;
     box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.3)!important;
     /* vertical */
@@ -31,7 +31,7 @@
 
 .header .Branch {
   color: #1a2849;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   display: inline-flex;
   grid-column-start: 1;
@@ -67,7 +67,7 @@
   box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.5)!important;
 }
 
-.searcher form,input{
+.searcher .form,input{
   max-width: 100%;
   min-width: 100%;
   position: relative;
@@ -95,6 +95,12 @@
 }
 
 
+.navbar-collapse   {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+
+}
+
 
 input{
   padding-right: 38px;
@@ -113,8 +119,26 @@ input{
 .campana {
   justify-self: end;
   padding-right: 10px;
+
+  grid-column-start: 9;
+  grid-column-end: 13;
 }
 
+/* .collapse:not(.show) {
+  display: none !important;
+} */
+
+@media screen and (min-width: 992px) {
+
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  /* .collapse:not(.show) .navbar-collapse  {
+    display: none !important;
+  } */
+
+}
 
 /*
 
