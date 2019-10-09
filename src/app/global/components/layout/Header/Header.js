@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa';
 import { logOut } from '../../../../redux/actions/loginActions';
 
 //  Assets
@@ -54,7 +55,7 @@ const Header = ({logOut, firebase}) => {
             </li>
           </ul> */}
           <div className='searcher'>
-            Developing with ♥
+            Developing with <FaHeart style={{color:'red'}}/>
           </div>
 
           {/* <!-- Topbar Search --> */}

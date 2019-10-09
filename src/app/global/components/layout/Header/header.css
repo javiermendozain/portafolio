@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.header .Branch {
+  opacity: 1 !important;
+}
+
 .header .Branch img{
   /* opacity: 0.4; */
   width: 40px;
