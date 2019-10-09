@@ -71,23 +71,23 @@
     
     
     
-![analizer](https://raw.githubusercontent.com/javiermendozain/portafolio/screenshots/analizer.png)
+![analizer](https://github.com/javiermendozain/portafolio/blob/master/screenshots/analizer.png)
 
 > #####  *Home*
 
-![home](https://raw.githubusercontent.com/javiermendozain/portafolio/screenshots/home.png)
+![home](https://github.com/javiermendozain/portafolio/blob/master/screenshots/home.png)
 
 > #####  *Post content view*
 
 
-![contentpost](https://raw.githubusercontent.com/javiermendozain/portafolio/screenshots/post_content_view.png
+![contentpost](https://github.com/javiermendozain/portafolio/blob/master/screenshots/post_content_view.png
 )
 
 > #####  *Add post with MarkDown*
 
 
-![markdown](https://raw.githubusercontent.com/javiermendozain/portafolio/screenshots/markdown.png)
+![markdown](https://github.com/javiermendozain/portafolio/blob/master/screenshots/markdown.png)
 
 > #####  *Add category*
 
-![logo](https://raw.githubusercontent.com/javiermendozain/portafolio/screenshots/add_category.png)
+![logo](https://github.com/javiermendozain/portafolio/blob/master/screenshots/add_category.png)
