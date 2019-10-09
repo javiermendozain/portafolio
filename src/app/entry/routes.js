@@ -2,7 +2,6 @@
 // Components
 import Home from '../pages/container/Home/Home';
 import NotFound from '../pages/components/NotFount/NotFound';
-import HelloWord from '../pages/components/HelloWord/Hello_word';
 
 // Containers
 import Blog from '../pages/container/Blog/Blog';
