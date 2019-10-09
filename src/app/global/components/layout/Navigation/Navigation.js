@@ -24,12 +24,12 @@ const Navigation = () => {
       <nav>
         <ul>
           <li>
-            {/* <NavLink to='/' exact activeClassName='is-selected' > */}
-            <div className='content-item hidden'>
-              <img src='./icon/house.png' className='icon' />
-              <span className='title'> Inicio </span>
-            </div>
-            {/* </NavLink> */}
+            <NavLink to='/' exact activeClassName='is-selected' >
+              <div className='content-item hidden'>
+                <img src='./icon/house.png' className='icon' />
+                <span className='title'> Inicio </span>
+              </div>
+            </NavLink>
           </li>
         </ul>
         <ul>

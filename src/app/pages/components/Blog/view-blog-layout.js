@@ -33,7 +33,7 @@ class ViewBlogLayout extends React.Component {
       <p className={style.title}>
         <div className="row">
           <div className="col-auto" style={{paddingRight:'0'}}>
-            <img src='/icon/back.png' className='icon' onClick={()=>this.props.history.goBack()} />
+            <img src='./icon/back.png' className='icon' onClick={()=>this.props.history.goBack()} />
           </div>
           <div className="col-sm">
             {contentPost.title}
