@@ -1,13 +1,12 @@
-/* eslint-disable react/jsx-boolean-value */
 // Dependencies
-import React from 'react';
-import { BrowserRouter, StaticRouter, Switch, Route } from 'react-router-dom';
-import Login from './pages/container/Login/Login';
+import React from "react";
+import { BrowserRouter, StaticRouter, Switch, Route } from "react-router-dom";
+import Login from "./pages/container/Login/Login";
 
 // Routes
-import routes from './entry/routes';
-import routerHome from './entry/routerHome';
-import Modal from './global/components/layout/Modal/Modal';
+import routes from "./entry/routes";
+import routerHome from "./entry/routerHome";
+import Modal from "./global/components/layout/Modal/Modal";
 
 export default ({ server, location, context }) => {
   const routesMap = routes.map((route, i) => <Route key={i} {...route} />);
@@ -17,11 +16,11 @@ export default ({ server, location, context }) => {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route path='/login' component={Login} exact = {true} />
-          <Route path='/' component={routerHome} exact = {false} />
+          <Route path="/login" component={Login} exact={true} />
+          <Route path="/" component={routerHome} exact={false} />
         </Switch>
       </BrowserRouter>
-      <Modal/>
+      <Modal />
     </div>
   );
 
@@ -29,16 +28,10 @@ export default ({ server, location, context }) => {
   if (server) {
     router = (
       <StaticRouter location={location} context={context}>
-        <Switch>
-          {routesMap}
-        </Switch>
+        <Switch>{routesMap}</Switch>
       </StaticRouter>
     );
   }
 
-  return (
-    <div>
-      {router}
-    </div>
-  );
+  return <div>{router}</div>;
 };

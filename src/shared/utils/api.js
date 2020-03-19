@@ -1,17 +1,17 @@
 // Dependencies
-import 'isomorphic-fetch';
-import queryString from 'query-string';
+import "isomorphic-fetch";
+import queryString from "query-string";
 
 export function apiEndpoint(endpoint, qs, fetchingFrom) {
-  let query = '';
-  let apiUrl = '';
+  let query = "";
+  let apiUrl = "";
 
   if (qs) {
     query = `?${qs}`;
   }
 
-  if (fetchingFrom === 'server') {
-    apiUrl = 'http://localhost:3000';
+  if (fetchingFrom === "server") {
+    apiUrl = "http://localhost:3000";
   }
 
   return `${apiUrl}/api/${endpoint}${query}`;
@@ -19,7 +19,7 @@ export function apiEndpoint(endpoint, qs, fetchingFrom) {
 
 export function apiFetch(endpoint, options = {}, query = false) {
   let qs;
-  const { fetchingFrom = 'client' } = options;
+  const { fetchingFrom = "client" } = options;
 
   delete options.fetchFrom;
 
@@ -35,9 +35,9 @@ export function apiFetch(endpoint, options = {}, query = false) {
 
 export function apiOptions(options = {}) {
   const {
-    method = 'GET',
+    method = "GET",
     headers = {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     },
     body = false
   } = options;
@@ -45,7 +45,7 @@ export function apiOptions(options = {}) {
   const newOptions = {
     method,
     headers,
-    credentials: 'include'
+    credentials: "include"
   };
 
   if (body) {
